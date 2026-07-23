@@ -1,0 +1,14 @@
+Moved budget_2024.xlsx to Spreadsheets
+Moved holiday_photo.jpg to Photos
+Moved invoice_march.pdf to Documents
+Moved notes.txt to Text Documents
+Moved old_backup.zip to Backups
+Moved budget_2024.xlsx to Spreadsheets
+Moved holiday_photo.jpg to Photos
+Moved invoice_march.pdf to Documents
+Moved notes.txt to Notes
+Moved old_backup.zip to Backups
+Deleted old_backup.zip
+Deleted old_backup.zip
+Moved budget_2024.xlsx to Finances
+Moved invoice_march.pdf to Invoices
