@@ -21,7 +21,7 @@ def ask_ollama(prompt, model="qwen2.5:7b"):
     return data["response"]
 
 # This defines the main bit of program that the user interacts with
-def main():
+def run_chat():
     # Prints a welcome message message and soem commands to help the user
     print("Local AI Assistant — type 'exit' to quit\n")
     # Creates the loop to create a communication loop with the user until ended
@@ -39,4 +39,4 @@ def main():
 # This is a standard Python safeguard to check if you are running this script directly. 
 # If you were to import this script into another script, it prevents the interactive loop from starting automatically.
 if __name__ == "__main__":
-    main()
+    run_chat()

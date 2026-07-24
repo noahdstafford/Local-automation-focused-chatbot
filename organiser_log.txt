@@ -1,0 +1,4 @@
+Moved budget_2024.xlsx to Finance
+Moved invoice_march.pdf to Finance
+Moved holiday_photo.jpg to Photos
+Deleted old_backup.zip
