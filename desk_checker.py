@@ -5,7 +5,6 @@ import requests
 def run_desk_checker():
     camera = cv2.VideoCapture(1)
     success, frame = camera.read()
-    print("Camera capture success:", success)
     cv2.imwrite("webcam_snapshot.jpg", frame)
     camera.release()
 
