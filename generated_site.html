@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily Grind</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f7f5ef;
+            color: #332e2b;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            padding: 1rem 1.5rem;
+            background-color: #3c3631;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+        }
+        .hero-section {
+            height: 40vh;
+            background-image: url('https://picsum.photos/1200/400');
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .hero-text {
+            text-align: center;
+            color: white;
+        }
+        .see-menu-btn {
+            padding: 0.75rem 1.5rem;
+            background-color: #3c3631;
+            border-radius: 25px;
+            margin-top: 1rem;
+            font-weight: bold;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .see-menu-btn:hover {
+            transform: scale(1.05);
+        }
+        .about-us {
+            padding: 2rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .about-text, .shop-image {
+            width: 48%;
+            flex-basis: 48%;
+        }
+        .about-text p {
+            margin-top: 0.75rem;
+        }
+        .menu-section {
+            padding: 2rem 1.5rem;
+            background-color: #3c3631;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        .shop-favorites {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        .menu-item {
+            background-color: #3c3631;
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .menu-item:hover {
+            transform: scale(1.02);
+        }
+        .download-menu-btn {
+            background-color: #3c3631;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            margin-top: 1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .download-menu-btn:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #3c3631;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 1.5rem;
+            margin-bottom: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Location</a></li>
+                </ul>
+            </nav>
+            <div class="hero-section">
+                <div class="hero-text">
+                    <h1>Fuel Your Day, Locally</h1>
+                    <p>Ethically sourced coffee and fresh pastries</p>
+                    <button class="see-menu-btn">See Our Menu</button>
+                </div>
+            </div>
+        </header>
+        <section class="about-us">
+            <img src="https://picsum.photos/400/300" alt="Shop Photo" class="shop-image">
+            <div class="about-text">
+                <p>Founded in 2021, we believe great coffee brings people together.</p>
+            </div>
+        </section>
+        <section class="menu-section">
+            <h2>Shop Favorites</h2>
+            <div class="shop-favorites">
+                <button class="menu-item">Espresso Bar</button>
+                <button class="menu-item">Pour-Over</button>
+                <button class="menu-item">Fresh Pastries</button>
+                <button class="menu-item">Seasonal Specials</button>
+            </div>
+            <button class="download-menu-btn">Download Full Menu</button>
+        </section>
+        <footer>
+            <p>123 Main Street | Mon-Fri 6:30AM-4PM, Sat-Sun 8AM-5PM</p>
+            <p><a href="#">Phone</a></p>
+            <p><a href="#">Email</a></p>
+            <div>
+                <a href="#"><img src="https://picsum.photos/60/60" alt="Social Media Icon"></a>
+                <a href="#"><img src="https://picsum.photos/60/60" alt="Social Media Icon"></a>
+                <a href="#"><img src="https://picsum.photos/60/60" alt="Social Media Icon"></a>
+            </div>
+            <p>&copy; 2023 The Daily Grind</p>
+        </footer>
+    </div>
+</body>
+</html>
