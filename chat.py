@@ -20,6 +20,21 @@ def ask_ollama(prompt, model="qwen2.5:7b"):
     #Looks inisde the dictionary for the specific key named 'response' and returns it back to the function called
     return data["response"]
 
+
+# Function to get the chat response along with the message history to develop chat history
+def ask_ollama_chat(messages, model="qwen2.5:7b"):
+    response = requests.post(
+        "http://localhost:11434/api/chat",
+        json={
+            "model": model,
+            "messages": messages,
+            "stream": False
+        }
+    )
+    data = response.json()
+    return data["message"]["content"]
+
+
 # This defines the main bit of program that the user interacts with
 def run_chat():
     # Prints a welcome message message and soem commands to help the user

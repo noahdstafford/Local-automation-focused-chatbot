@@ -8,6 +8,11 @@ from organiser import run_organiser
 from receipt_parser import run_receipt_parser
 from photo_detective import run_photo_detective
 from document_writer import run_document_writer
+from website_generator import run_website_generator
+from desk_checker import run_desk_checker
+from performance_checker import run_performance_checker
+from voice_assistant import run_voice_assistant
+
 
 # This is the initial input that starts the whole program
 user_request = input('Assistant: So what can i help you with today? \n')
@@ -22,6 +27,10 @@ router_prompt = f"""You are a router for a local AI assistant with these tools:
 5. receipt_parser - reading a receipt image and logging it to a budget spreadsheet
 6. photo_detective - answering a question about any other image
 7. document_writer - Constructing detailed documents, emails or other written texts
+8. website_generator - This uses a user prompt and generates the website described
+9. desk_checker - checking the webcam to see what's on the desk
+10. performance_checker - checking CPU, memory, and disk usage and interpreting system health
+11. Voice assistant - communicate with the model verbally and get verbal responses back
 
 Given the user's request below, respond ONLY with JSON in this exact format, no other text:
 {{"tool": "one_of_the_names_above"}}
@@ -57,5 +66,13 @@ elif parsed["tool"] == "receipt_parser":
     run_receipt_parser()
 elif parsed["tool"] == "photo_detective":
     run_photo_detective()
-elif parsed["tool"] == "document writer":
+elif parsed["tool"] == "document_writer":
     run_document_writer()
+elif parsed["tool"] == "website_generator":
+    run_website_generator()
+elif parsed["tool"] == "desk_checker":
+    run_desk_checker()
+elif parsed["tool"] == "performance_checker":
+    run_performance_checker()
+elif parsed["tool"] == "voice_assistant":
+        run_voice_assistant()
