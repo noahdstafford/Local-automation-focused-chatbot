@@ -12,6 +12,7 @@ from website_generator import run_website_generator
 from desk_checker import run_desk_checker
 from performance_checker import run_performance_checker
 from voice_assistant import run_voice_assistant
+from news_digest import get_news_digest
 
 
 # This is the initial input that starts the whole program
@@ -31,6 +32,7 @@ router_prompt = f"""You are a router for a local AI assistant with these tools:
 9. desk_checker - checking the webcam to see what's on the desk
 10. performance_checker - checking CPU, memory, and disk usage and interpreting system health
 11. Voice assistant - communicate with the model verbally and get verbal responses back
+12. news_digest - fetches and summarizes today's tech, business, Irish, UK, and world news
 
 Given the user's request below, respond ONLY with JSON in this exact format, no other text:
 {{"tool": "one_of_the_names_above"}}
@@ -76,3 +78,6 @@ elif parsed["tool"] == "performance_checker":
     run_performance_checker()
 elif parsed["tool"] == "voice_assistant":
         run_voice_assistant()
+elif parsed["tool"] == "news_digest":
+    news_digest = get_news_digest()
+    print(news_digest)
